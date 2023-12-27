@@ -60,7 +60,10 @@ maxhemo=find(HeadMotion(:,1)>maxheadmotion|HeadMotion(:,2)>maxheadmotion|HeadMot
 subj_excl_HM=union(meanJK,maxhemo);
 subj_excl=headidx(subj_excl_HM);
 
-load CPM_gloCWF2.mat
+load CPM_gloCWF2_1.mat；
+load CPM_gloCWF2_2.mat；
+rest_1_mats=cat(3,rest_1mats_1,rest_1mats_2)；
+
 trust_tet=readtable('trust6_CPM.xlsx','ReadVariableNames',1)
 PMAT_CR=table2array(trust_tet(:,3));
 
